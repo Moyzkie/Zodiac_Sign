@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  text-align: center;
+  background-image:url(https://image.freepik.com/free-vector/astrology-wheel-with-zodiac-signs-outer-space-background-mystery-esoteric_189033-386.jpg);
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center ;
+  
+}
+.wrapper .front-face .b{
+  top: 6.5rem;
+  position: relative;
+  
+}
+.wrapper{
+  height: 400px;
+  width: 320px;
+  position: relative;
+  transform-style: preserve-3d;
+	perspective: 1000px;
+  transition: transform 1.5s;
+  color: rgb(231, 231, 231);
+
+}
+
+.glow {
+ 
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 10px #5e1ff0, 0 0 10px #000fe6, 0 0 10px #0400e6, 0 0 10px #0f00e6, 0 0 10px #0400e6;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 10px #914dff, 0 0 50px #a04dff, 0 0 10px #914dff, 0 0 10px #490fe7, 0 0 10px #2d1dbd, 0 0 10px #824dff;
+  }
+}
+.wrapper .card{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  background: #fff;
+  border-radius: 15px;
+  transform: translateY(0deg);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  transition: transform 0.7s cubic-bezier(0.4,0.2,0.2,1);
+}
+
+.wrapper .card img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.wrapper .back-face{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  transform: rotateY(180deg);
+}
+
+.wrapper .back-face img{
+  height: 150px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 50%;
+  background: white
+}
+
+.back-face .info .text{
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+}

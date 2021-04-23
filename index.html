@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+   <!---<title>3D Flip Card on Hover | CodingLab</title>---->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  </head>
+  <body>
+   
+    <div class="wrapper" onclick="flip(event)">
+       
+        <div style=" background-image:url(https://image.freepik.com/free-vector/astrology-wheel-with-zodiac-signs-outer-space-background-mystery-esoteric_189033-386.jpg); background-position: center;" class="card front-face">
+          <h2 class="b glow"> Enter your birthday </h2>
+          <div class="b">
+             <label class="text_header glow">Month</label>
+            <div><input  class="text_header" type="number" id="month" min="1" max="12" ></div> 
+          </div>
+          <div class="b"> 
+            <label  class="text_header glow">Day</label>
+            <div><input  class="text_header" type="number" id="day" min="1" max="31"></div>
+         </div>
+         <h2 class="glow" style="top:9rem;position: relative;">Click the card</h2>
+        </div>
+        <div style=" background-image:url(https://image.freepik.com/free-vector/astrology-wheel-with-zodiac-signs-outer-space-background-mystery-esoteric_189033-386.jpg); background-position: center;" class="card back-face">
+          <p class="photo" id="photo"></p>
+          <div class="info">
+          <h1 class="glow" id="output"></h1>
+          <p class="text glow" id="text"></p>
+          </div>
+        </div>
+    </div>
+   
+    <script src="main.js"></script>
+  </body>
+</html>
